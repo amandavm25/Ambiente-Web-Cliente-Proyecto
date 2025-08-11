@@ -2,14 +2,14 @@
 
 class Database {
     private static $host = 'localhost';
-    private static $dbname = 'comida_casera';
+    private static $dbname = 'mamalila_db';
     private static $username = 'root';
     private static $password = '';
 
-    private static function connect() {
+    public static function connect() {
         try {
             $pdo = new PDO(
-                "mysql:host=" . <self::$host . ";dbname=" . self::$dbname . ";charset=utf8",
+                "mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8",
                 self::$username,
                 self::$password
             );
